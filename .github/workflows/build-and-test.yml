@@ -1,0 +1,31 @@
+name: Build and test
+on: 
+  push:
+    tags: 
+      - v*
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: node-modules-${{ hashfiles('**/package-lock.json') }}
+      - name: Github checkout
+        uses: actions/checkout@v2
+      - name: Setup node.js environment
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.16'
+      - name: Install NPM dependencies
+        run:  npm i typescript -g && npm i
+      - name: Compile Typescript files
+        run: tsc
+      - name: Execute unit testing sets
+        run: npm run coverage
+      - name: Publish to coveralls.io
+        uses: coverallsapp/github-action@v1.1.2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./reports/coverage/lcov.info

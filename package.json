@@ -1,0 +1,26 @@
+{
+  "name": "action-create-release-from-tag",
+  "version": "1.0.0",
+  "description": "Github action to create release with changelog, on tag number based.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "coverage": "nyc --reporter=lcov --report-dir=./reports/coverage ./node_modules/.bin/mocha ./test/00.bootstrap.unit.test.js --exit --reporter spec --timeout 10000 --env test",
+    "test": "nyc --reporter=html --report-dir=./reports/nyc-coverage ./node_modules/.bin/mocha ./test/00.bootstrap.unit.test.js --exit --reporter spec --timeout 10000 --env test",
+    "version": "git add package.json && auto-changelog -p && git add CHANGELOG.md && git commit -m \"Update changelog\""
+  },
+  "author": "Steve Lebleu",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.3.0",
+    "@actions/github": "^5.0.0",
+    "child-process-promise": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.1",
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "sinon": "^11.1.1",
+    "typescript": "^4.2.3"
+  }
+}

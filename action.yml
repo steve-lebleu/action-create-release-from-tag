@@ -1,0 +1,16 @@
+name: Create release from last tag
+description: Create release from last tag with changelog on commits history based.
+author: Steve Lebleu
+branding:
+  icon: tag  
+  color: blue
+inputs:
+  token:
+    description: GitHub access token
+    required: true
+outputs:
+  changelog:
+    description: Generated changelog
+runs:
+  using: node12
+  main: './lib/index.js'
