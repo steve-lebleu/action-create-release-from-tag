@@ -56,6 +56,6 @@ export class GitService {
       warning(`No messages have been found`);
     }
 
-    return messages.stdout ?? 'N/A';
+    return messages.stdout ? messages.stdout.split('\n').filter(msg => !msg.toLowerCase().includes('merge')).join('\n') : 'N/A';
   }
 }
