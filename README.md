@@ -3,7 +3,7 @@
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/konfer-be/action-create-release-from-tag/master)
 ![Requires.io (branch)](https://img.shields.io/requires/github/konfer-be/action-create-release-from-tag/master)
 
-# Create release whith changelog as release note
+# Create release with changelog as release note
 
 As repetitive and simple task, release creation is an ideal candidate to automation with Github action. This package create a release where:
 
@@ -12,16 +12,18 @@ As repetitive and simple task, release creation is an ideal candidate to automat
 
 ## Getting started
 
-Simple as that in your action definition:
+In your action definition:
 
 ```yaml
 - name: Create release with changelog
-  uses: konfer-be/action-create-release-from-tag@v1.0.1
+  uses: konfer-be/action-create-release-from-tag@v1.0.2
   with:
     token: ${{ secrets.GITHUB_TOKEN }} # required
 ```
 
-:warning: Be aware that the checkout must absolutely bring back the entire commit history.
+:info: Merge commits are excluded from changelog.
+
+:warning: Be aware that the checkout must absolutely bring back the entire commit history to be able to build changelog.
 
 ## Licence
 
