@@ -447,7 +447,7 @@
         "affectsGlobalScope": false
       },
       "../src/services/git.service.ts": {
-        "version": "0a3c7e00b8d78382e80f069840a1f9594a8b2a058b22571a2804377933d628bc",
+        "version": "016ddbd18d9f24b51c481a9316fd8f64162a8df18cc0c9f39f5cb7d0c3a20461",
         "signature": "a15a365411e999aaea99eeca1928fe147b1402fe45b3a03f0aea093acc529d1e",
         "affectsGlobalScope": false
       },

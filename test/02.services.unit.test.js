@@ -72,6 +72,15 @@ describe('Services', () => {
         expect(commits).to.be.eqls('commit1\ncommit2\ncommit3');
       });
 
+      it('should returns the filtered commits before last tag', async () => {
+        stubExec.callsFake(() => {
+          return { stdout: 'commit1\nmergecommit2\ncommit3' };
+        });
+        const commits = await GitService.getCommits(['v1.0.0']);
+        expect(stubExec.called).to.be.true;
+        expect(commits).to.be.eqls('commit1\ncommit3');
+      });
+
       it('should returns N/A', async() => {
         stubExec.callsFake(() => {
           return { stdout: null };
