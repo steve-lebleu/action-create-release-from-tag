@@ -15,7 +15,7 @@ In your action definition:
 
 ```yaml
 - name: Create release with changelog
-  uses: konfer-be/action-create-release-from-tag@v1.0.3
+  uses: konfer-be/action-create-release-from-tag@v1.0.7
   with:
     token: ${{ secrets.GITHUB_TOKEN }} # required
 ```
