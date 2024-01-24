@@ -1,5 +1,5 @@
 [![Build](https://github.com/steve-lebleu/action-create-release-from-tag/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/steve-lebleu/action-create-release-from-tag/actions/workflows/build-and-test.yml)
-[![Coverage Status](https://coveralls.io/repos/github/steve-lebleu/action-create-release-from-tag/badge.svg?branch=master)](https://coveralls.io/github/steve-lebleu/action-create-release-from-tag?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/steve-lebleu/action-create-release-from-tag/badge.svg?branch=refs/tags/v1.0.6)](https://coveralls.io/github/steve-lebleu/action-create-release-from-tag?branch=refs/tags/v1.0.6)
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/steve-lebleu/action-create-release-from-tag/master)
 
 # Create release with changelog as release note
