@@ -1,4 +1,4 @@
-import { debug, info, setFailed } from '@actions/core'
+import { debug, info } from '@actions/core'
 import { getOctokit, context } from '@actions/github'
 
 /**
