@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: '14.16'
       - name: Install NPM dependencies
-        run:  npm i typescript -g && npm i
+        run:  npm i typescript@4.2.3 -g && npm i
       - name: Compile Typescript files
         run: tsc
       - name: Execute unit tests

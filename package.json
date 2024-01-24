@@ -16,7 +16,7 @@
     "child-process-promise": "^2.2.1"
   },
   "devDependencies": {
-    "@types/node": "^15.12.1",
+    "@types/node": "^20.11.6",
     "chai": "^4.3.4",
     "mocha": "^8.4.0",
     "nyc": "^15.1.0",
