@@ -12,5 +12,5 @@ outputs:
   changelog:
     description: Generated changelog
 runs:
-  using: node18
+  using: node20
   main: './lib/index.js'
