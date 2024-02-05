@@ -12,5 +12,5 @@ outputs:
   changelog:
     description: Generated changelog
 runs:
-  using: node14
+  using: node16
   main: './lib/index.js'
