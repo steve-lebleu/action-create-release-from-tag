@@ -1,6 +1,6 @@
 {
   "name": "action-create-release-from-tag",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Github action to create release with changelog, on tag number based.",
   "main": "./lib/index.js",
   "scripts": {
