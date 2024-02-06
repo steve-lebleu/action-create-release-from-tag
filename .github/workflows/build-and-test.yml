@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: '**/node_modules'
           key: node-modules-${{ hashfiles('**/package-lock.json') }}
@@ -17,9 +17,9 @@ jobs:
       - name: Setup node.js environment
         uses: actions/setup-node@v4
         with:
-          node-version: '14.16'
+          node-version: '20.9.0'
       - name: Install NPM dependencies
-        run:  npm i typescript@4.2.3 -g && npm i
+        run:  npm i typescript@5.3.3 -g && npm i
       - name: Compile Typescript files
         run: tsc
       - name: Execute unit tests
